@@ -35,13 +35,3 @@ int output_cases(const char *format, va_list ap)
 	return (char_len);
 }
 
-/**
- * handle_percent - Function that handles percent sign
- *
- * Return: Format specifier
- */
-
-int handle_percent(void)
-{
-	return _putchar('%');
-}

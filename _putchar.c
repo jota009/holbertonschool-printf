@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  * _putchar - Prints character
@@ -18,5 +19,5 @@ int _putchar(char c)
 
 int handle_percent(void)
 {
-	return _putchar('%');
+	return write(STDOUT_FILENO, "%", 1);
 }

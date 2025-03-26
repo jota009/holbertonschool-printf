@@ -27,8 +27,7 @@ int _printf(const char *format, ...)
 			format++;
 			if (*format == '%')
 			{
-				_putchar('%');
-				char_len++;
+				char_len += handle_percent();
 			}
 			else
 			{
@@ -37,8 +36,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(*format);
-			char_len++;
+			char_len += _putchar(*format);
 		}
 		format++;
 	}

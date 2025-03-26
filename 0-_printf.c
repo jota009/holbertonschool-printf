@@ -16,19 +16,31 @@ int _printf(const char *format, ...)
 	va_start(ap, format);
 
 	if (format == NULL)
+	{
 		return (-1);
+	}
 
-	while (*format != '\0')
+	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
-			char_len += output_cases(format, ap);
+			if (*format == '%')
+			{
+				char_len += handle_percent();
+			}
+			else
+			{
+				char_len += output_cases(format, ap);
+			}
 		}
 		else
-			char_len += write(STDOUT_FILENO, &(*format), 1);
+		{
+			char_len += write(STDOUT_FILENO, format, 1);
+		}
 		format++;
 	}
+
 	va_end(ap);
 	return (char_len);
 }

@@ -11,7 +11,6 @@
 
 int output_cases(const char *format, va_list ap)
 {
-	int len = 0;
 	int char_len = 0;
 
 	switch (*format)
@@ -23,15 +22,14 @@ int output_cases(const char *format, va_list ap)
 			char_len += print_string(va_arg(ap, char *));
 			break;
 		case '%':
-			len += _putchar('%');
+			char_len += handle_percent();
 			break;
 		case '\0':
 			return (-1);
 		default:
 			char_len += _putchar('%');
-			char_len += write(STDOUT_FILENO, &(*format), 1);
+			char_len += _putchar(*format);
 			break;
 	}
 	return (char_len);
 }
-

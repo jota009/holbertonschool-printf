@@ -1,6 +1,5 @@
 #include "main.h"
 #include <unistd.h>
-#include <stdarg.h>
 
 /**
  * _printf - Produces output according to a format
@@ -54,5 +53,5 @@ int _printf(const char *format, ...)
 
 int handle_percent(void)
 {
-	return write(STDOUT_FILENO, "%", 1);
+	return (_putchar('%'));
 }

@@ -2,10 +2,11 @@
 #include <unistd.h>
 
 /**
- * _putchar - Prints character
+ * _putchar - Writes a character to stdout
  * @c: input character
  *
- * Return: Character
+ * Return: On success 1
+ * -1 otherwise
  */
 
 int _putchar(char c)

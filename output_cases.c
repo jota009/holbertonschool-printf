@@ -27,7 +27,7 @@ int output_cases(const char *format, va_list ap)
 		case '\0':
 			return (-1);
 		default:
-			char_len += _putchar('%');
+			char_len += handle_percent();
 			char_len += _putchar(*format);
 			break;
 	}

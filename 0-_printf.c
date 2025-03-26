@@ -44,3 +44,14 @@ int _printf(const char *format, ...)
 	va_end(ap);
 	return (char_len);
 }
+
+/**
+ * handle_percent - Prints a single percent sign
+ *
+ * Return: 1 (the number of characters printed)
+ */
+
+int handle_percent(void)
+{
+	return _putchar('%');
+}

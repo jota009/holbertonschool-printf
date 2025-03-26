@@ -9,5 +9,6 @@ int output_cases(const char *format, va_list ap);
 int print_string(const char *str);
 int _putchar(char c);
 int handle_percent(void);
+int print_integer(int n);
 
 #endif

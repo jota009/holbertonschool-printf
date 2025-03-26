@@ -28,6 +28,8 @@ int _printf(const char *format, ...)
 			if (*format == '%')
 			{
 				char_len += handle_percent();
+				_putchar('%');
+				char_len++;
 			}
 			else
 			{

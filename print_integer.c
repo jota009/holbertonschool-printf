@@ -13,21 +13,22 @@ int print_integer(int n)
 	int char_len = 0;
 	char buffer[20];
 	int i = 0;
+	unsigned int num;
 
 	if (n < 0)
 	{
 		char_len += _putchar('-');
-		n = -n;
+		num = (unsigned int)(-n);
 	}
-
-	do
-
+	else
 	{
-		buffer[i++] = (n % 10) + '0';
-		n /= 10;
+		num = n;
 	}
 
-	while (n > 0);
+	do {
+		buffer[i++] = (num % 10) + '0';
+		num /= 10;
+	} while (num > 0);
 
 	while (i > 0)
 	{

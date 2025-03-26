@@ -53,5 +53,5 @@ int _printf(const char *format, ...)
 
 int handle_percent(void)
 {
-	return _putchar('%');
+	return write(STDOUT_FILENO, "%", 1);
 }

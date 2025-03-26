@@ -21,6 +21,10 @@ int output_cases(const char *format, va_list ap)
 		case 's':
 			char_len += print_string(va_arg(ap, char *));
 			break;
+		case 'd':
+		case 'i':
+			char_len += print_integer(va_arg(ap, int));
+			break;
 		case '%':
 			char_len += handle_percent();
 			break;

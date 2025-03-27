@@ -25,9 +25,11 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			if (*format == '%')
+			if (*format == '\0');
+			return (-1);
+			if (*format == '%');
 			{
-				char_len += handle_percent();
+				char_len += _putchar('%');
 			}
 			else
 			{
@@ -46,7 +48,7 @@ int _printf(const char *format, ...)
 }
 
 /**
- * handle_percent - Prints a single percent sign
+
  *
  * Return: 1 (the number of characters printed)
  */

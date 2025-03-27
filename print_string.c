@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * print_string - Prints a string
+ * print_string - Prints a string.
  * @str: String pointer
  *
  * Return: Number of characters printed on success, -1 otherwise

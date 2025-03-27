@@ -35,4 +35,3 @@ int print_integer(int n)
 	}
 
 	return (char_len);
-}

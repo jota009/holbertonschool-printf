@@ -19,10 +19,25 @@ va_end (man 3 va_end)
 va_copy (man 3 va_copy)
 va_arg (man 3 va_arg)
 
+Function Prototypes
+
+int _printf(const char *format, ...);
+Formats and prints data according to the specified format string.
+int output_cases(const char *format, va_list ap);
+Handles different format specifiers and outputs the corresponding data.
+int print_string(const char *str);
+Prints a string to the standard output.
+int _putchar(char c);
+Writes a single character to the standard output.
+int handle_percent(void);
+Handles the percent sign in the formt string.
+int print_integer(int n);
+Prints an integer to the standard output.
+
 Examples
 
-.B _printf("Hello, %s!\n", "world");
-.B _printf("Number: %d\n", 42);
+ _printf("Hello, %s!\n", "world");
+ _printf("Number: %d\n", 42);
 
 WEBSITE
 https://github.com/AngelD89

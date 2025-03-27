@@ -1,0 +1,60 @@
+.\" Manpage for custom printf
+.TH MAN_3_PRINTF "March 2025" "1.0" "Custom Printf Manual"
+.SH NAME
+_printf \- custom printf function
+.SH SYNOPSIS
+.B int_printf(const char *format, ...);
+.B int output_cases(const char *format, va_list ap);
+.B int print_string(const char *str);
+.B int _putchar(char c);
+.B int handle_percent(void);
+.B int print_integer(int n);
+.SH DESCRIPTION
+The \fB_printf\fR function formats and prints data to the standard output.
+This custom function supports various format specifiers similar to the standard printf function.
+The file includes various function prototypes that handle different formats.
+
+.SH FUNCTION PROTOTYPES
+.TP
+.B int _printf(const char *format, ...);
+.br
+Formats and prints data according to the specified format string.
+
+.TP
+.B int output_cases(const char *format, va_list ap);
+.br
+Handles different format specifiers and outputs the corresponding data.
+
+.TP
+.B int print_string(const char *str);
+.br
+Prints a string to the standard output.
+
+.TP
+.B int _putchar(char c);
+.br
+Writes a single character to the standard output.
+
+.TP
+.B int handle_percent(void);
+.br
+Handles the percent sign in the formt string.
+
+.TP
+.B int print_integer(int n);
+.br
+Prints an integer to the standard output.
+
+.SH EXAMPLES
+.B _printf("Hello, %s!\n", "world");
+.B _printf("Number: %d\n", 42);
+
+.SH RETURN VALUE
+Returns the total number of characters printed, or a negative value on error.
+
+.SH SEE ALSO
+printf(3), sprintf(3), fprintf(3)
+
+.SH AUTHORS
+Josniel Ramos
+Angel Bayo
